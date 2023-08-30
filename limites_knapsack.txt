@@ -1,0 +1,28 @@
+Complexité temporelle :
+
+ L'algorithme de sac à dos a une complexité temporelle proportionnelle à la taille de la matrice DP,
+
+  c'est-à-dire O(n * budget), où 'n' est le nombre d'actions et 'budget' est la contrainte budgétaire. Cette complexité
+  peut être problématique pour de grandes instances du problème.
+
+Contrainte sur les coûts et les valeurs :
+
+ L'algorithme de sac à dos assume généralement que les coûts et les valeurs des objets sont des nombres entiers.
+ Si les coûts ou les valeurs sont des nombres réels, des modifications supplémentaires pourraient être nécessaires.
+
+Consommation de mémoire :
+
+La matrice DP utilisée par l'algorithme de sac à dos peut consommer beaucoup de mémoire,
+ce qui peut limiter sa faisabilité pour des problèmes avec un budget très élevé.
+
+Cas de valeurs fractionnaires :
+
+L'algorithme de sac à dos 0-1, tel qu'il est généralement formulé, ne prend pas en compte
+ les valeurs fractionnaires. Si vous pouvez choisir une fraction d'un objet (fractional knapsack),
+  l'algorithme glouton est plus approprié.
+
+Nombre de solutions possibles :
+
+ L'algorithme de sac à dos ne garantit pas toujours la découverte de la solution optimale
+ en cas de grande variété de choix possibles et de contraintes complexes. Dans certains cas, une recherche exhaustive
+ peut être nécessaire pour garantir l'optimalité.

@@ -1,0 +1,31 @@
+FONCTION knapsack(actions, budget)
+    n ← TAILLE(actions)
+    dp ← MATRICE(n+1, budget+1)
+
+    POUR i DE 1 À n FAIRE
+        POUR w DE 0 À budget FAIRE
+            SI actions[i-1].cost > w ALORS
+                dp[i][w] ← dp[i-1][w]
+            SINON
+                dp[i][w] ← MAX(dp[i-1][w], dp[i-1][w - actions[i-1].cost] + actions[i-1].cost * actions[i-1].gain_percentage / 100)
+
+    selected_actions ← LISTE_VIDE
+    w ← budget
+
+    POUR i DE n À 1 EN DÉCRÉMENTANT
+        SI dp[i][w] ≠ dp[i-1][w] ALORS
+            AJOUTER actions[i-1] À selected_actions
+            w ← w - actions[i-1].cost
+
+    RETOURNER selected_actions, dp[n][budget]
+FIN FONCTION
+
+actions ← LIRE_ACTIONS_DE_FICHIER_JSON('data.json')
+budget ← 500
+
+selected_actions, best_total_gain ← knapsack(actions, budget)
+total_cost ← SOMME(cost POUR CHAQUE action DANS selected_actions)
+
+AFFICHER "Meilleure Combinaison (Gain Total:", best_total_gain, ", Coût Total:", total_cost, "):"
+POUR CHAQUE action DANS selected_actions FAIRE
+    AFFICHER "Action:", action.name, ", Coût:", action.cost, ", Pourcentage de Gain:", action.gain_percentage, "%"
