@@ -1,0 +1,7 @@
+bruteforce :
+complexité : O(2^n)
+mémoire : O(2^n)
+
+knapsack :
+complexité : O(n * budget)
+mémoire : O(n * budget)
