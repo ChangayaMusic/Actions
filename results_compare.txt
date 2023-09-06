@@ -1,0 +1,41 @@
+Ensemble de données 1 :
+
+Mon approche :
+
+Coût total : 499,43 €
+Gain total : 196,84 €
+Pourcentage de gain moyen : 36,45 %
+Achats de Sienna :
+
+Coût total : 498,76 €
+Retour total : 196,61 €
+Bénéfice de Sienna : 196,61 €
+
+Ensemble de données 2 :
+
+Mon approche :
+
+Coût total : 499,24 €
+Gain total : 194,90 €
+Pourcentage de gain moyen : 39,45 %
+Achats de Sienna :
+
+Coût total : 489,24 €
+Bénéfice de Sienna : 193,78 €
+
+Voici une comparaison des chiffres :
+
+Ensemble de données 1 :
+
+Mon gain total est légèrement supérieur au bénéfice de Sienna de 0,23 €.
+Le coût total de Sienna est légèrement inférieur au vôtre de 0,67 €.
+
+Ensemble de données 2 :
+
+Mon gain total est légèrement inférieur au bénéfice de Sienna de 1,88 €.
+Le coût total de Sienna est légèrement inférieur au vôtre de 10 €.
+
+Dans les deux ensembles de données, il existe des différences mineures dans les gains totaux et les coûts.
+Mon approche et les achats de Sienna donnent des résultats similaires, chacun ayant un léger avantage
+dans différents aspects. Il est à noter que la comparaison dépend de divers facteurs et que
+différentes stratégies d'investissement peuvent entraîner des résultats légèrement différents.
