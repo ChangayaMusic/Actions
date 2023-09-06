@@ -1,5 +1,5 @@
 import csv
-
+import timeit
 class Action:
     def __init__(self, name, cost, gain_percentage):
         self.name = name
@@ -53,23 +53,28 @@ def read_actions_from_csv(csv_filename):
     return actions
 
 budget = 500
+# Define a function to perform knapsack for dataset 1 and measure time
+def knapsack_dataset1():
+    actions1 = read_actions_from_csv('dataset1.csv')
+    selected_actions1, best_total_gain1 = knapsack(actions1, budget)
+    total_cost1 = sum(action.cost for action in selected_actions1)
+    print("Results for dataset1.csv:")
+    print(f"Best Combination (Total Gain: {best_total_gain1:.2f}, Total Cost: {total_cost1:.2f}):")
+    for action in selected_actions1:
+        print(f"Action: {action.name}, Cost: {action.cost}, Gain Percentage: {action.gain_percentage}%")
 
-# Load actions from dataset1.csv
-actions1 = read_actions_from_csv('dataset1.csv')
-selected_actions1, best_total_gain1 = knapsack(actions1, budget)
-total_cost1 = sum(action.cost for action in selected_actions1)
+time_dataset1 = timeit.timeit(knapsack_dataset1, number=1)
+print(f"Time taken for dataset1: {time_dataset1:.6f} seconds")
 
-print("Results for dataset1.csv:")
-print(f"Best Combination (Total Gain: {best_total_gain1:.2f}, Total Cost: {total_cost1:.2f}):")
-for action in selected_actions1:
-    print(f"Action: {action.name}, Cost: {action.cost}, Gain Percentage: {action.gain_percentage}%")
+# Define a function to perform knapsack for dataset 2 and measure time
+def knapsack_dataset2():
+    actions2 = read_actions_from_csv('dataset2.csv')
+    selected_actions2, best_total_gain2 = knapsack(actions2, budget)
+    total_cost2 = sum(action.cost for action in selected_actions2)
+    print("\nResults for dataset2.csv:")
+    print(f"Best Combination (Total Gain: {best_total_gain2:.2f}, Total Cost: {total_cost2:.2f}):")
+    for action in selected_actions2:
+        print(f"Action: {action.name}, Cost: {action.cost}, Gain Percentage: {action.gain_percentage}%")
 
-# Load actions from dataset2.csv
-actions2 = read_actions_from_csv('dataset2.csv')
-selected_actions2, best_total_gain2 = knapsack(actions2, budget)
-total_cost2 = sum(action.cost for action in selected_actions2)
-
-print("\nResults for dataset2.csv:")
-print(f"Best Combination (Total Gain: {best_total_gain2:.2f}, Total Cost: {total_cost2:.2f}):")
-for action in selected_actions2:
-    print(f"Action: {action.name}, Cost: {action.cost}, Gain Percentage: {action.gain_percentage}%")
+time_dataset2 = timeit.timeit(knapsack_dataset2, number=1)
+print(f"Time taken for dataset2: {time_dataset2:.6f} seconds")
